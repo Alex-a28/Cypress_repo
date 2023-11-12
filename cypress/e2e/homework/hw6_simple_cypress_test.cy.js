@@ -7,7 +7,7 @@ describe('Eshop Tredgate ', () => {
         cy.get('#input-telephone').type("999999999");
         cy.get('#input-password').type("Test01");
         cy.get('#input-confirm').type("Test01");
-        cy.get('.pull-right > .btn').click();
+        cy.get("input[value='Continue']").click();
 
     });
 });
