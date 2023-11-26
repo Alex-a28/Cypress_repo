@@ -1,14 +1,19 @@
-import { LoginPage } from "../page-object/pmtool/login_page";
+import { LoginPage } from "../../page-objects/pmtool/login_page";
 
-describe('Fluent ogin Tests', () => {
-    it('Login to pmtool using Fluent API Tests', () => {
+describe("Fluent Login tests", () => {
+    beforeEach(() => {
+        new LoginPage().openPmtool();
+    });
+    it("Login to pmtool using Fluent API test", () => {
         new LoginPage()
-            .openPmtool()
-            .typeUserName("cy_podzim_2023")
-            .typePassword("CypressPodzim")
+            .typeUsername(Cypress.env("pmtool_username"))
+            .typePassword(Cypress.env("pmtool_password"))
             .clickLogin()
             .clickProfile()
             .clickLogoff();
+    });
 
+    it("Open and close forgotten password page", () => {
+        new LoginPage().clickPasswordForgotten().clickBack();
     });
 });
