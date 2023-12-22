@@ -1,9 +1,14 @@
-import { HeaderSection } from "./header_section";
+export class HomePage {
+  constructor() {
+    this.profileButton = "#user_dropdown > .dropdown-toggle";
+    this.logoffButton = "#logout > a";
+  }
 
-export class HomePage extends HeaderSection {
-    constructor() {
-        super();
-        this.welcomePageHeader = "#welcome-page-header";
-        cy.get(this.welcomePageHeader).should("be.visible");
-    }
+  clickProfile() {
+    cy.get(this.profileButton).click();
+  }
+
+  clickLogoff() {
+    cy.get(this.logoffButton).click();
+  }
 }
