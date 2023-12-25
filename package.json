@@ -20,6 +20,12 @@
   "devDependencies": {
     "@cypress/xpath": "^2.0.3",
     "@faker-js/faker": "^8.2.0",
-    "cypress": "^13.3.0"
+    "cypress": "^13.4.0"
+  },
+  "dependencies": {
+    "chai": "^4.3.10",
+    "faker": "^6.6.6",
+    "mocha": "^10.2.0",
+    "moha": "^0.0.1"
   }
 }
