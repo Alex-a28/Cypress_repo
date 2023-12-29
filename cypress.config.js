@@ -13,6 +13,6 @@ module.exports = defineConfig({
     },
     watchForFileChanges: false,
     defaultCommandTimeout: 10000,
-    baseUrl: "http://tredgate.com/pmtool",
+    chromeWebSecurity: false,
   },
 });
