@@ -1,4 +1,4 @@
-import { LoginPage } from "./login_page";
+
 import { MenuSection } from "./menu_sections";
 
 export class HeaderSection extends MenuSection {
@@ -14,7 +14,13 @@ export class HeaderSection extends MenuSection {
   }
 
   clickLogoff() {
+    const { LoginPage } = require("./login_page");
+    cy.get(this.profileButton).click();
     cy.get(this.logoffButton).click();
     return new LoginPage();
+  }
+  checkHeaderContainsUsername(lastName) {
+    cy.get(this.profileButton).should('contains.text', lastName);
+    return this;
   }
 }

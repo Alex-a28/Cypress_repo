@@ -5,6 +5,7 @@ export class MenuSection extends BasePage {
     super(path);
     this.projectsLink = "#Projects";
     this.dashboardLink = "#dashboard";
+    this.usersLink = ".page-sidebar-menu > #Users"
   }
 
   openDashboard() {
@@ -17,5 +18,11 @@ export class MenuSection extends BasePage {
     const { ProjectsPage } = require("./projects_page");
     cy.get(this.projectsLink).click();
     return new ProjectsPage();
+  }
+  openUsers() {
+    const { UsersPage } = require("./users_page");
+    cy.get(this.usersLink).click();
+    return new UsersPage();
+
   }
 }

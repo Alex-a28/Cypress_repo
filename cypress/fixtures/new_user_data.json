@@ -1,0 +1,17 @@
+[
+    {   
+    "name_prefix": "hw_de_manager_",
+    "password": "54321",
+    "access_group": "Manager"
+    },  
+    {
+    "name_prefix": "hw_de_client_",
+    "password": "54321",
+    "access_group": "Client"
+    },  
+    {
+    "name_prefix": "hw_de_developer_",
+    "password": "54321",
+    "access_group": "Developer"
+    }
+]

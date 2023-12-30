@@ -26,4 +26,8 @@ export class UsersPage extends HeaderSection {
     cy.get(this.addUserButton).should("have.text", text);
     return this;
   }
+  clickAddUserButton() {
+    cy.get(this.addUserButton).click();
+  }
+
 }
